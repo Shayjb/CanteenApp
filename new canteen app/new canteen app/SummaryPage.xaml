@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             NavigationPage.HasNavigationBar="false"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="new_canteen_app.SummaryPage"
+             BackgroundColor= "White" 
+             >
+    
+    
+   
+    <ContentPage.Content>
+        
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center">
+                <Frame BackgroundColor="#00A9E0" Padding="10" CornerRadius="0">
+                <Label Text="Item Selection" HorizontalTextAlignment="Center" TextColor="white" FontSize="25"/>
+            </Frame>
+                
+                    <Grid RowSpacing="25" ColumnSpacing="25" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,0,0,0">
+
+                    <Frame  Padding="0" BackgroundColor="#00A9E0"   CornerRadius="50">
+                        <ImageButton ClassId="Burger" Source="burger.jpg"  Clicked="AddToKart" HorizontalOptions="Start"  BackgroundColor="Transparent" WidthRequest="200" Grid.Row="0" Grid.Column="0"/>
+                    </Frame>
+                    <Frame Padding="0" BackgroundColor="#00A9E0" CornerRadius="50" Grid.Column="1" Grid.Row="0" >
+                        <ImageButton ClassId="ChickenBurger" Source="chickenburger.jpg" Clicked="AddToKart" BackgroundColor="Transparent" WidthRequest="200"/>
+                    </Frame>
+                    <Frame Padding="0" BackgroundColor="#00A9E0" CornerRadius="50" Grid.Column="0" Grid.Row="1" >
+                    <ImageButton ClassId="Mash" Source="mashpotato.jpg" Clicked="AddToKart" BackgroundColor="Transparent" WidthRequest="200"/>
+                    </Frame>
+                    <Frame Padding="0" BackgroundColor="#00A9E0" CornerRadius="50" Grid.Column="2" Grid.Row="0">
+                        <ImageButton ClassId="Chips" Source="chips.jpg" Clicked="AddToKart" Grid.Column="2" Grid.Row="0" WidthRequest="200" HeightRequest="110" BackgroundColor="Transparent" />
+                    </Frame>
+                    <Frame Padding="0" BackgroundColor="#00A9E0" CornerRadius="50" Grid.Column="2" Grid.Row="1">
+                    <ImageButton ClassId="Coke" Source="coke.png" Clicked="AddToKart" WidthRequest="200" HeightRequest="110" BackgroundColor="Transparent" />
+                    </Frame>
+                    <Frame Padding="0" BackgroundColor="#00A9E0" CornerRadius="50" Grid.Column="1" Grid.Row="1">
+                        <ImageButton ClassId="Water" Source="water.png" Clicked="AddToKart" Grid.Column="1" Grid.Row="1" WidthRequest="200" HeightRequest="110" BackgroundColor="Transparent" />
+                    </Frame>
+
+
+                    
+
+                    
+                </Grid>
+
+            <Grid Padding="20" Margin="0,0,0,0">
+                <Label x:Name="Price" HorizontalOptions="End" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Margin="-20,0,0,-20" TextColor="Black"/>
+                    <Button Text="Checkout" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked" Margin="0,0,0,0" BackgroundColor="#00A9E0"/>
+                    <Button Text="Clear Basket" HorizontalOptions="Center" VerticalOptions="Start" Clicked="Basket_Clear" Margin="-300,0,0,0" BackgroundColor="#00A9E0"/>
+                </Grid>
+         
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
